@@ -1,0 +1,17 @@
+//NOTE: Automation API TESTING
+        cy.request({
+            method: 'POST',
+            url: 'https://reqres.in/api/login',
+            body: {
+                "email": "demomail@mail.com",
+                "password": *******"
+            },
+            headers: {
+                required headers should be included here in a format like this:
+                'Authorization':'message to be passed'
+            }
+        }).then((response) => {
+            expect(response.status).to.eq(200);
+            expect(response.body).to.have.property('token')
+        })
+//NOTE: Automation API TESTING
